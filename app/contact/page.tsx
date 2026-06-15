@@ -3,194 +3,121 @@ export default function Contact() {
     <main
       style={{
         minHeight: "100vh",
-        background: "rgba(168, 34, 85, 0.08)",
+        background:
+          "linear-gradient(135deg, rgba(168,34,85,0.10), rgba(255,255,255,0.95))",
         fontFamily: "Arial, sans-serif",
         color: "#3f3f3f",
-        padding: "80px 60px",
+        padding: "90px 60px",
       }}
     >
-      <h1
-        style={{
-          fontSize: "56px",
-          color: "#a82255",
-          marginBottom: "25px",
-        }}
-      >
-        Contact Us
-      </h1>
-
-      <p
-        style={{
-          maxWidth: "800px",
-          fontSize: "20px",
-          lineHeight: "1.9",
-          color: "#444",
-        }}
-      >
-        We are available to assist families with care, dignity and respect.
-      </p>
-
-      <div
-        style={{
-          display: "flex",
-          gap: "30px",
-          flexWrap: "wrap",
-          marginTop: "60px",
-        }}
-      >
-        <ContactCard title="Phone" text="+27 XX XXX XXXX" />
-        <ContactCard title="Email" text="example@gmail.com" />
-        <ContactCard title="WhatsApp" text="+27 XX XXX XXXX" />
-        <ContactCard title="Instagram" text="@siphesihle_funeral_services" />
-        <ContactCard title="TikTok" text="@siphesihle_funeral_services" />
-        <ContactCard title="Location" text="Address will be added here" />
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          gap: "20px",
-          flexWrap: "wrap",
-          marginTop: "40px",
-        }}
-      >
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          style={socialButton}
-        >
-          Instagram
-        </a>
-
-        <a
-          href="https://tiktok.com"
-          target="_blank"
-          style={socialButton}
-        >
-          TikTok
-        </a>
-
-        <a
-          href="https://wa.me/"
-          target="_blank"
-          style={socialButton}
-        >
-          WhatsApp
-        </a>
-      </div>
-
-      <div
-        style={{
-          marginTop: "60px",
-          background: "white",
-          padding: "40px",
-          borderRadius: "24px",
-          boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
-          maxWidth: "700px",
-        }}
-      >
-        <h2
+      <section style={{ maxWidth: "1150px", margin: "0 auto" }}>
+        <h1
           style={{
+            fontSize: "56px",
             color: "#a82255",
-            marginBottom: "25px",
+            textAlign: "center",
+            marginBottom: "18px",
           }}
         >
-          Send Us a Message
-        </h2>
+          Contact Us
+        </h1>
 
-        <input
-          placeholder="Your Name"
-          style={inputStyle}
-        />
+        <p
+          style={{
+            textAlign: "center",
+            maxWidth: "760px",
+            margin: "0 auto 60px",
+            fontSize: "20px",
+            lineHeight: "1.8",
+            color: "#444",
+          }}
+        >
+          Reach us directly through phone, WhatsApp, email or our social media
+          pages. We are here to assist with dignity, care and respect.
+        </p>
 
-        <input
-          placeholder="Your Phone Number"
-          style={inputStyle}
-        />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "25px",
+          }}
+        >
+          <ContactButton
+            title="Call Us"
+            subtitle="Speak to us directly"
+            link="tel:+27XXXXXXXXX"
+          />
 
-        <input
-          placeholder="Your Email"
-          style={inputStyle}
-        />
+          <ContactButton
+            title="WhatsApp"
+            subtitle="Message us anytime"
+            link="https://wa.me/27XXXXXXXXX"
+          />
 
-        <textarea
-          placeholder="Your Message"
-          rows={6}
-          style={inputStyle}
-        />
+          <ContactButton
+            title="Email Us"
+            subtitle="Send us an enquiry"
+            link="https://mail.google.com/mail/?view=cm&fs=1&to=info@siphesihle.co.za"
+          />
 
-        <button style={buttonStyle}>
-          Submit Message
-        </button>
-      </div>
+          <ContactButton
+            title="Facebook"
+            subtitle="Visit our page"
+            link="https://www.facebook.com/share/1F9pYB3s3D/"
+          />
+
+          <ContactButton
+            title="Instagram"
+            subtitle="Follow our updates"
+            link="https://www.instagram.com/siphesihle_funeral_services?igsh=MWhrcGI2YWs3azl0ZQ=="
+          />
+
+          <ContactButton
+            title="TikTok"
+            subtitle="View our videos"
+            link="https://www.tiktok.com/"
+          />
+        </div>
+      </section>
     </main>
   );
 }
 
-function ContactCard({
+function ContactButton({
   title,
-  text,
+  subtitle,
+  link,
 }: {
   title: string;
-  text: string;
+  subtitle: string;
+  link: string;
 }) {
   return (
-    <div
-      style={{
-        background: "white",
-        padding: "35px",
-        borderRadius: "24px",
-        width: "280px",
-        boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
-      }}
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ textDecoration: "none" }}
     >
-      <h2
+      <div
         style={{
-          color: "#a82255",
-          marginBottom: "15px",
+          background: "white",
+          padding: "34px",
+          borderRadius: "24px",
+          textAlign: "center",
+          boxShadow: "0 10px 28px rgba(0,0,0,0.08)",
+          border: "1px solid rgba(168,34,85,0.12)",
         }}
       >
-        {title}
-      </h2>
+        <h2 style={{ color: "#a82255", margin: "0 0 10px", fontSize: "26px" }}>
+          {title}
+        </h2>
 
-      <p
-        style={{
-          lineHeight: "1.8",
-        }}
-      >
-        {text}
-      </p>
-    </div>
+        <p style={{ margin: 0, color: "#666", fontSize: "16px", lineHeight: "1.6" }}>
+          {subtitle}
+        </p>
+      </div>
+    </a>
   );
 }
-
-const inputStyle = {
-  width: "100%",
-  padding: "16px",
-  marginBottom: "18px",
-  borderRadius: "14px",
-  border: "1px solid rgba(168, 34, 85, 0.25)",
-  fontSize: "16px",
-  boxSizing: "border-box" as const,
-};
-
-const buttonStyle = {
-  padding: "16px 34px",
-  borderRadius: "30px",
-  border: "none",
-  background: "#a82255",
-  color: "white",
-  cursor: "pointer",
-  fontSize: "16px",
-};
-
-const socialButton = {
-  padding: "16px 34px",
-  borderRadius: "30px",
-  border: "none",
-  background: "#a82255",
-  color: "white",
-  textDecoration: "none",
-  fontWeight: 600,
-  display: "inline-block",
-};
