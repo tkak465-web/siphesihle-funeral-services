@@ -103,7 +103,7 @@ export default function Home() {
             background: "white",
           }}
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src="/video/hero.mp4" type="video/mp4" />
         </video>
       </section>
 
