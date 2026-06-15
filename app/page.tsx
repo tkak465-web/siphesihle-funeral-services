@@ -8,7 +8,6 @@ export default function Home() {
         color: "#3f3f3f",
       }}
     >
-      {/* HEADER */}
       <header
         style={{
           display: "flex",
@@ -55,7 +54,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* HERO */}
       <section
         style={{
           padding: "100px 60px",
@@ -89,19 +87,26 @@ export default function Home() {
           </div>
         </div>
 
-        <img
-          src="/images/logo/logo.jpeg"
-          alt="Funeral Service"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
+          disablePictureInPicture
           style={{
             width: "420px",
+            height: "420px",
+            objectFit: "cover",
             borderRadius: "24px",
             boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
             background: "white",
           }}
-        />
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
       </section>
 
-      {/* SERVICES */}
       <section style={{ padding: "80px 60px", background: "rgba(255,255,255,0.6)" }}>
         <h2
           style={{
@@ -138,7 +143,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT */}
       <section style={{ padding: "100px 60px" }}>
         <h2 style={{ fontSize: "48px", color: "#a82255", marginBottom: "30px" }}>
           About Us
@@ -150,7 +154,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* FOOTER */}
       <footer
         style={{
           background: "#a82255",
