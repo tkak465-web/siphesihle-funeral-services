@@ -164,7 +164,7 @@ export default function Home() {
       >
         <h3>Siphesihle Funeral Services</h3>
         <p>24/7 Assistance Available</p>
-        <p>Phone: +270106342575</p>
+        <p>Phone: +27106342575</p>
         <p>Email: siphesihlefuneralservices@gmail.com</p>
 
         <p style={{ marginTop: "30px", opacity: 0.7 }}>
