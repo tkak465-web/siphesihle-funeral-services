@@ -46,13 +46,13 @@ export default function Contact() {
           <ContactButton
             title="Call Us"
             subtitle="Speak to us directly"
-            link="tel:+27XXXXXXXXX"
+            link="tel:+2727106342575"
           />
 
           <ContactButton
             title="WhatsApp"
             subtitle="Message us anytime"
-            link="https://wa.me/27XXXXXXXXX"
+            link="https://wa.me/2727106342575"
           />
 
           <ContactButton
